@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled';
+//custom hooks
+import useMoneda from '../hooks/useMoneda';
+
 
 const Button = styled.input`
     margin-top:20px;
@@ -20,10 +23,13 @@ const Button = styled.input`
 
 `;
 function Formulario() {
+
+    const [moneda, SelectMonedas, actualizarState] = useMoneda();
+
     return (
         <form>
-
-            <Button type="submit">Convertir</Button>
+            <SelectMonedas />
+            <Button type="submit" value="Calcular"></Button>
         </form>
     )
 }
