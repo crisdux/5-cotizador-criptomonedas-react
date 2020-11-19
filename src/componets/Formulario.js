@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 //custom hooks
 import useMoneda from '../hooks/useMoneda';
 import useCriptomoneda from '../hooks/useCriptomoneda';
-
+//componets
+import Error from './Error';
 import axios from 'axios';
 const Button = styled.input`
     margin-top:20px;
@@ -62,7 +63,7 @@ function Formulario() {
 
     return (
         <form onSubmit={cotizarMoneda}>
-            {error && 'Campos requeridos'}
+            {error && <Error mensaje="Todos los campos son requeridos"/>}
             <SelectMonedas />
             <SelectCripto/>
             <Button type="submit" value="Calcular"></Button>
