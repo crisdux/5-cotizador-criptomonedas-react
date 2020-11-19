@@ -27,8 +27,8 @@ function Cotizacion({resultado}) {
             <Precio>El precio es: <span>{resultado.PRICE}</span></Precio>
             <Info>Precio mas alto del dia: <span>{resultado.HIGHDAY}</span></Info>
             <Info>Precio mas bajo del dia: <span>{resultado.LOWDAY}</span></Info>
-            <Info>Variacón ultimas 24 horas<span>{resultado.CHANGEPCT24HOUR}</span></Info>
-            <Info>Ultima actualizacion<span>{resultado.LASTUPDATE}</span></Info>
+            <Info>Variacón ultimas 24 horas: <span>{resultado.CHANGEPCT24HOUR}</span></Info>
+            <Info>Ultima actualizacion: <span>{resultado.LASTUPDATE}</span></Info>
         </ResultadoDiv>
     )
 }
