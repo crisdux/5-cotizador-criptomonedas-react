@@ -24,7 +24,7 @@ const Button = styled.input`
     }
 
 `;
-function Formulario() {
+function Formulario({guardarMoneda,guardarCriptomoneda}) {
 
     const [listaCripto, guardarCriptomonedas] = useState([]);
     const [error, guardarError] = useState(false);
@@ -59,6 +59,9 @@ function Formulario() {
         }
         //pasar lo datos al comonente principal
         guardarError(false);
+        guardarMoneda(moneda);
+        guardarCriptomoneda(criptomoneda);
+
     }
 
     return (
